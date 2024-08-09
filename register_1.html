@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OWNER_CONSTRAINTS form</title>
+<script>
+function validateForm()
+{
+let a=document.forms["form"]["houseid"].value;
+if(a == ""){
+alert("Please enter House ID");
+return false;
+}
+let b=document.forms["form"]["nop"].value;
+if(b == ""){
+alert("Please enter No Of Persons ");
+return false;
+}
+let c=document.forms["form"]["ms"].value;
+if(c == ""){
+alert("Please enter marital status");
+return false;
+}
+let d=document.forms["form"]["ge"].value;
+if(d == ""){
+alert("Please enter gender allowed ");
+return false;
+}
+let z=document.forms["form"]["pa"].value;
+if(z == ""){
+alert("Please enter pets");
+return false;
+}
+}
+</script>
+<style>
+body{
+background-image:url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX54616481.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+
+}
+</style>
+</head>
+<body>
+<div style="color:black;padding:20px;">
+<form name="form" action="register_1.php" method="POST">
+<h1 style="background-color:gray;color:white"><center>OWNER CONSTRAINTS</center></h1>
+<br>
+<h1 style="background-color:SlateGray;color:white">Enter the following details:</h1>
+<h2><label for="houseid">House ID:</label></h2>
+<input type="text" id="houseid" name="houseid">
+<h2><label for="nop">No of Persons allowed:</label></h2>
+<input type="number" id="nop" name="nop"><br>
+<h2><label for="ms">Marital Status:</label></h2>
+<input type="text" id="ms" name="ms">
+<h2><label for="ga">Gender allowed:</label></h2>
+<input type="text" id="gen" name="gen"><br>
+<h2><label for="pa">Pets allowed or not:</label></h2>
+<input type="text" id="pa" name="pa">
+<h2><label for="re">Restrictions:</label></h2>
+<input type="text" id="re" name="re"><br>
+<center><input type="button" value="validate Form" style="background-color:Gray;color:white;padding:10px;" onclick="return validateForm()"></center><br><br>
+<center><input type="submit" value="Submit" style="background-color:Gray;color:white;font-size:200%;" ></center>
+</form>
+</div>
+</body>
+</html>

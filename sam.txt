@@ -1,0 +1,67 @@
+else */
+if($type=="owner"){
+$result=mysqli_query($con,"select * from Owner_detail");
+echo "<center>";
+echo "<table>";
+echo "<caption><h1>Owner Details</h1></caption>";
+while($row=mysqli_fetch_array($result)){
+if($row['Password']==$pwd){
+echo "<tr><td>Name</td><td>".$row['Name']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Email</td><td>".$row['Email']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Gender</td><td>".$row['Gender']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>BloodGroup</td><td>".$row['BloodGroup']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Phone Number</td><td>".$row['Phonenumber']."</td></tr>";
+echo "<br/>";
+}
+
+echo "</center>";}
+}
+if($type=="tenant"){
+$result=mysqli_query($con,"select * from User_details");
+echo "<center>";
+echo "<table>";
+echo "<caption><h1>Tenant Details</h1></caption>";
+echo "<br/><br/>";
+while($row=mysqli_fetch_array($result)){
+if($row['Password']==$pwd){
+echo "<tr><td>Name</td><td>".$row['Name']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Email</td><td>".$row['Email']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Date of Accomodation</td><td>".$row['DateOfAccomodation']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Gender</td><td>".$row['Gender']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>BloodGroup</td><td>".$row['BloodGroup']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>No of People</td><td>".$row['NoofPeople']."</td></tr>";
+echo "<br/>";
+}
+echo "</table>";
+echo "</center>";}
+}
+if($type=="owner"){
+$result=mysqli_query($con,"select * from Owner_detail");
+echo "<center>";
+echo "<table>";
+echo "<caption><h1>Owner Details</h1></caption>";
+echo "<br/><br/>";
+while($row=mysqli_fetch_array($result)){
+if($row['Password']==$pwd){
+echo "<tr><td>Name</td><td>".$row['Name']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Email</td><td>".$row['Email']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Gender</td><td>".$row['Gender']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>BloodGroup</td><td>".$row['BloodGroup']."</td></tr>";
+echo "<br/>";
+echo "<tr><td>Phone number</td><td>".$row['Phonenumber']."</td></tr>";
+echo "<br/>";
+}
+echo "</center>";}
+}
